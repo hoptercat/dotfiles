@@ -39,12 +39,16 @@ set undodir     =$HOME/.vim/files/undo/
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
 call plug#begin('~/.vim/plugged')
-Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-startify'
+Plug 'morhetz/gruvbox'
 Plug 'yggdroot/indentline'
 Plug 'rust-lang/rust.vim'
 Plug 'w0ng/vim-hybrid'
 Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
+Plug 'toml-lang/toml'
 call plug#end()
 
-colorscheme hybrid
+colorscheme gruvbox

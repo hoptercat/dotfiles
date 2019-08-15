@@ -8,9 +8,9 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 # ZSH_THEME="nicoulaj"
-ZSH_THEME="afowler"
+# ZSH_THEME="afowler"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -73,11 +73,11 @@ ZSH_THEME="afowler"
 plugins=(
     archlinux
     docker
-    git
     pip
     python
     sudo 
     encode64
+    rust
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -113,13 +113,20 @@ export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
 
 # rustup mirror setup
-export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
-export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+# export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+# export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
 # some alias
+alias ctl='systemctl'
 alias ssh='TERM=xterm-256color \ssh'
-
+alias vi='vim'
 alias t='tmux'
 alias ta='tmux attach'
 alias ls='exa'
 alias c='clear'
+
+# git alias
+alias ga='git add'
+alias gc='git commit'
+alias gcs='git commit -S'
+alias gcms='git commit -S -m'
