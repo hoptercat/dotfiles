@@ -1,6 +1,7 @@
 set nocompatible
 set noshowmode
 set number
+set t_Co=256
 
 filetype plugin indent on  " Load plugins according to detected filetype.
 syntax on                  " Enable syntax highlighting.
@@ -39,16 +40,15 @@ set undodir     =$HOME/.vim/files/undo/
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
 call plug#begin('~/.vim/plugged')
-Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
 Plug 'yggdroot/indentline'
 Plug 'rust-lang/rust.vim'
-Plug 'w0ng/vim-hybrid'
 Plug 'scrooloose/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
+Plug 'itchyny/lightline.vim'
 Plug 'toml-lang/toml'
+Plug 'srcery-colors/srcery-vim'
 call plug#end()
 
-colorscheme gruvbox
+colorscheme srcery
+
