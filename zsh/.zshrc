@@ -11,6 +11,7 @@ plugins=(
     python
     sudo 
     rust
+    zsh-aliases-exa
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -22,7 +23,6 @@ alias ssh='TERM=xterm-256color \ssh'
 alias vi='vim'
 alias t='tmux'
 alias ta='tmux attach'
-alias ls='exa'
 alias rdb='mysql -u root -p'
 
 # git alias
