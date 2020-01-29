@@ -19,7 +19,6 @@ source $ZSH/oh-my-zsh.sh
 
 # some alias
 alias ctl='systemctl'
-alias ssh='TERM=xterm-256color \ssh'
 alias vi='vim'
 alias t='tmux'
 alias ta='tmux attach'
