@@ -1,34 +1,26 @@
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=/usr/share/oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-# ZSH_THEME="sorin"
+DISABLE_AUTO_UPDATE="true"
+plugins=(git
+	 docker
+	 rustup 
+	 fzf
+	 golang
+	)
+export http_proxy="http://127.0.0.1:7890"
+export https_proxy="http://127.0.0.1:7890"
 
-plugins=(
-    archlinux
-    docker
-    pip
-    python
-    sudo 
-    rust
-    zsh-aliases-exa
-)
+alias c="clear"
+
+ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
 
 source $ZSH/oh-my-zsh.sh
 
-
-# some alias
-alias ctl='systemctl'
-alias vi='vim'
-alias t='tmux'
-alias ta='tmux attach'
-alias rdb='mysql -u root -p'
-
-# git alias
-alias ga='git add'
-alias gc='git commit'
-alias gcs='git commit -S'
-alias gcms='git commit -S -m'
-
-http_proxy="http://127.0.0.1:8010"
-https_proxy="http://127.0.0.1:8010"
+alias ls="exa"
+alias tmux="TERM=screen-256color-bce tmux"
+alias ta="tmux a"
